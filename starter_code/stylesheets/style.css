@@ -13,25 +13,30 @@ body {
 	font-size: 17px;
 	display: flex;
 	flex-direction: column;
-	max-width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	color: var(--nav-grey);
-}
-.logo {
-	width: 26%;
-	padding: 3% 4%;
+.main {
+    max-width: 100%;
 }
 
-i {
-	width: 10%;
-	height: auto;
-	justify-content: flex-end;
-	float: right;
+nav {
+    display: flex;
+    position: fixed;
+    height: 8vh;
+    width: 90%;
+    padding: 0 5%;
+    color: var(--nav-grey);
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+}
+
+nav img {
+    max-height: 100%;
 }
 
 ul {
@@ -42,13 +47,16 @@ li {
 	text-decoration: none;
 }
 
-header {
-	max-width: 100%;
+.navbar ~ header {
+    margin-top: 15vh;
 }
 
+header div {
+    margin: auto 4vw;;
+}
 header img {
-	max-width: 100%;
-	margin: 3px 1px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 header p {
@@ -86,11 +94,6 @@ header button,
 	color: white;
 }
 
-.sign-in-or-sign-up button {
-	background-color: var(--b-purple);
-	color: white;
-}
-
 p {
 	color: var(--par-grey);
 }
@@ -124,20 +127,22 @@ footer {
 
 footer ul,
 li {
-	margin: 0;
+	margin: 3% 6%;
 	padding: 2% 0;
 }
 
 footer .title {
 	font-weight: bold;
-	margin-bottom: 15%;
+    margin-bottom: 15%;
+    letter-spacing: 2px;
 }
 
 .main-flex {
 	display: flex;
 	flex-flow: row wrap;
 	align-items: flex-start;
-	justify-content: space-evenly;
+    justify-content: space-evenly;
+    margin:3% 5%;
 }
 
 .ul-block {
@@ -146,13 +151,15 @@ footer .title {
 
 .contact ul {
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
+	flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin: 0;
 }
 
 .contact li,
 .contact span {
-	font-weight: 700;
+    font-weight: 700;
+    font-size: 0.8em;
 }
 
 .language-bar {
@@ -171,18 +178,11 @@ footer .title {
 
 /* Iteration 1 / Extra Small Screen */
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (orientation: portrait) {
-	.navbar-2 {
-		display: inline;
-	}
-	.navbar-2 ul {
-		display: none;
-	}
-	.logo {
-		padding: 0 4%;
-	}
-	#bars {
-		margin: 3%;
-	}
+	   
+    .navbar ul {
+        display: none;
+    }
+	
 	button,
 	input {
 		margin: 5% 10%;
@@ -209,6 +209,31 @@ footer .title {
 
 /* Iteration 2 / Small Screen */
 @media only screen and (min-device-width: 767px) and (max-device-width: 961px) and (orientation: portrait) {
+    body {
+        max-width: 100%;
+        font-size: 2em;
+    }
+
+    .logo {
+        padding: 1%;
+        max-width: 15%;
+    }
+    
+
+    .fa-bars {
+        font-size: 2em;
+        padding: 3%; 
+        margin: 0;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    header h1 {
+        font-size: 2.5em;
+        margin: 5% 2%;
+    }
 }
 
 /* Iteration 3 / Tablet Screen*/
