@@ -86,6 +86,11 @@ header button,
 	color: white;
 }
 
+.sign-in-or-sign-up button {
+	background-color: var(--b-purple);
+	color: white;
+}
+
 p {
 	color: var(--par-grey);
 }
@@ -120,32 +125,49 @@ footer {
 footer ul,
 li {
 	margin: 0;
-    padding: 5% 0;
+	padding: 2% 0;
 }
 
 footer .title {
-    font-weight: bold;
-    margin-bottom: 15%;
+	font-weight: bold;
+	margin-bottom: 15%;
 }
 
 .main-flex {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	justify-content: space-evenly;
 }
+
 .ul-block {
-    width: 50%
+	width: 50%;
 }
 
-.contact > ul li {
-    display: inline-flex;
-    flex-direction: row;   
-    width: 32%; 
-    font-weight: bold;
+.contact ul {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
 }
 
+.contact li,
+.contact span {
+	font-weight: 700;
+}
+
+.language-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1% 0;
+}
+
+.social-icons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
 
 /* Iteration 1 / Extra Small Screen */
 @media only screen and (min-device-width: 320px) and (max-device-width: 768px) and (orientation: portrait) {
@@ -169,22 +191,20 @@ footer .title {
 		border-radius: 5px;
 	}
 
-	header button {
-		border-color: lightgrey;
-	}
-
 	#headerSignin {
 		text-align: center;
 		font-size: 0.6em;
 	}
 
-	.sign-in-or-sign-up button {
-		background-color: var(--b-purple);
-		color: white;
-	}
 	footer img {
-		width: 30%;
-	}
+        margin: 0 auto;
+        width: 20%;
+    }
+    
+    .language-bar {
+        width: 50%;
+        margin: 12% 22%;
+    }
 }
 
 /* Iteration 2 / Small Screen */
